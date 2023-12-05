@@ -1,0 +1,35 @@
+openapi: "3.0.0"
+info:
+  version: 1.0.0
+  title: Swagger Petstore
+  license:
+    name: MIT
+paths:
+  /pet:
+    get:
+      tags:
+        - pet
+      responses:
+        "200":
+          description: Get Pet
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Pet"
+  /shelter:
+    get:
+      tags:
+        - shelter
+      responses:
+        "200":
+          description: Get Shelter
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Shelter"
+components:
+  schemas:
+    Pet:
+      type: object
+    Shelter:
+      type: object
